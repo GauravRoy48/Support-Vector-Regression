@@ -28,7 +28,7 @@ regressor = SVR(kernel='rbf', gamma = 'auto')
 regressor.fit(X,Y)
 
 # Predicting a new result with SVR
-Y_pred =sc_Y.inverse_transform(regressor.predict(sc_X.transform([[6.5]])))
+Y_pred =sc_Y.inverse_transform(regressor.predict(sc_X.transform(np.array([[6.5]]))))
 
 # Visualizing SVR results
 plt.scatter(X, Y, color='red')
